@@ -53,7 +53,7 @@ public class RequestManager {
 
     public void getRecipeDetails(RecipeDetailsListener listener,int id){
         CallRecipeDetails callRecipeDetails=retrofit.create(CallRecipeDetails.class);
-        Call<RecipeDetailsResponse> call=callRecipeDetails.callRecipeDetails(id,context.getString(R.string.api_key));
+        Call<RecipeDetailsResponse> call=callRecipeDetails.callRecipeDetails(id,context.getString(#Your API KEY));
         call.enqueue(new Callback<RecipeDetailsResponse>() {
             @Override
             public void onResponse(Call<RecipeDetailsResponse> call, Response<RecipeDetailsResponse> response) {
